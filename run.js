@@ -26,9 +26,15 @@ const combs = {
   maxAsyncRequests: {
     maxAsyncRequests: 1
   },
-  'maxRequest>maxSize': {
-    maxSize: 1024,
-    maxAsyncRequests: 1
+  'maxRequest-maxSize-priority': {
+    cacheGroups: {
+      BigFile: {
+        test: /30KB/,
+        priority: 10,
+        maxAsyncRequests: 1,
+        maxSize: 40 * 1024
+      }
+    }
   }
 }
 
