@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack build --mode=production"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider node ./run.js"
   },
   "devDependencies": {
     "arg": "^5.0.2",
